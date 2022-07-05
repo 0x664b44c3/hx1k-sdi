@@ -4,6 +4,8 @@ An SDI encoder/serializer on Lattice iCE40 FPGAs
 The iCE40 series of FPGAs is low cost and is supported by an opensource toolchain (though not currently used for this project)
 The devices are low density and low speed and lack advanced features like SerDes or true LVDS-IO, though.
 
+![board](board.jpg)
+
 ## Abstract
 This project implements an SD-SDI serializer (aka transmitter) completely in fabric, requiring nothing but an unused PLL
 that is used to generate a 135MHz from an externally supplied 27MHz sample clock (27MWords/s with CbYCrY 4:2:2 encoding, 
