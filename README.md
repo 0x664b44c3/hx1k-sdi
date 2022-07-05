@@ -18,7 +18,7 @@ iCE40-HX FPGAs. UP-series might work, too, but it's unclear if the IOB and Fabri
 ## Contents
 This project consists of the following subfolders:
  * fpga: the FPGA design (VHDL, iCECube2 project)
- * hardware: The board design (eagle 6), also schematic diagrams and gerber files
+ * hardware: The board design (eagle 6), schematic diagrams as PDF
  * firmware: Firmware for the ATSAMD21 MCU that is on the board as well
- * release: synthesized FPGA config, firmware image etc.
+ * release: synthesized FPGA config, firmware image, gerbers etc
 
