@@ -16,9 +16,18 @@ Most of the logic operates at 27MHz with just the final multiplexer and a DDR-ou
  * iCE40HX1k FPGA
  * 27MHz crystal oscillator
  * 10bit bt.656 video port
- * TVP5151 video decoder to test analog to sdi conversion (works)
- * color bars generator
- 
+ * TVP5151 video decoder to test analog to sdi conversion
+   * alternatively/additionally an LMH1881 can be fitted
+ * 1MByte (512kx16) of SRAM taht can hold one complete frame of interlaced PAL/NTCS
+ * ATSAMD21G18 MCU for programming the FPGA config flash and configuring the TVP, can be omitted
+ * 4-pin header for I2C 128x32 OLED display
+ * FPGA config pins on pinheader to allow flashing the config without a MCU
+ * switchmode regulator for the 3.3V rail, allows input voltages of 5 to 12V
+* Current functionality in the FPGA demo project
+   * Color bars generator
+   * SDI pathological pattern generator
+   * Analog to SDI converter
+   * About half the FPGA is still free for additional functionality
 
 ## Scope
 This project contains a complete eval board for SDI video generation on
