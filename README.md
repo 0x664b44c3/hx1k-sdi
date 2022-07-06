@@ -4,6 +4,13 @@ An SDI encoder/serializer on Lattice iCE40 FPGAs
 The iCE40 series of FPGAs is low cost and is supported by an opensource toolchain (though not currently used for this project)
 The devices are low density and low speed and lack advanced features like SerDes or true LVDS-IO, though.
 
+## Features of the serializer
+ * fits multiple times into an 1k gates iCE40 FPGA
+ * fpga-vendor agnostic, besides the specific instantiation of the SB_IO for DDR out
+ * needs one PLL running at half the bitrate (or at full bitrate if your IO can run at 270MHz)
+ * should be extendable to generate DVB-ASI (would need 8B/10B instead of SMPTE scrambler and NRZI)
+ * accepts bt.656 video at 27MHz word rate
+
 ## Abstract
 This project implements an SD-SDI serializer (aka transmitter) completely in fabric, requiring nothing but an unused PLL
 that is used to generate a 135MHz from an externally supplied 27MHz sample clock (27MWords/s with CbYCrY 4:2:2 encoding, 
